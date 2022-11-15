@@ -1,4 +1,5 @@
-@extends('layouts.app')
+@extends('layouts.logged-navbar')
+
 @section('content')
 <div class="container p-4 pt-5 mt-5">
     <h3 style="color: #3E6D81;" class="pb-3">

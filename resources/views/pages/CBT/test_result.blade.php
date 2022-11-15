@@ -1,4 +1,5 @@
-@extends('layouts.app')
+@extends('layouts.logged-navbar')
+
 @section('content')
 <div class="container-fluid mt-5">
     <div class="col-lg-6 offset-lg-3 offset-md-3">

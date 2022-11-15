@@ -13,16 +13,18 @@ class QuestionController extends Controller
         return view('pages/Generate/generate');
     }
 
-    public function generate()
-    {
-        return view('pages/Generate/generate_question');
-    }
-
     public function question_collection()
     {
         $questionModel = new QuestionBank();
         $questions = $questionModel::all();
         return view('pages/Generate/question_collection', ['questions' => $questions]);
+    }
+
+    public function detail_collection()
+    {
+        $questionModel = new QuestionBank();
+        $questions = $questionModel::all();
+        return view('pages/Generate/detail_collection', ['questions' => $questions]);
     }
 
     public function add_question_manual()

@@ -1,8 +1,8 @@
-@extends('layouts.app')
+@extends('layouts.logged-navbar')
 
 @section('content')
-<div class="container-fluid">
-    <div class="row p-4 pb-0 pt-5">
+<div class="container">
+    <div class="row pb-0 pt-5">
         <h4 style="color: #CA6035;" class="text-center">
             <b>
                 Add Manual Question

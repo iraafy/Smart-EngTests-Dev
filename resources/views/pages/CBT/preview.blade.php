@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.logged-navbar')
 
 @section('content')
 <div class="p-5 pb-3 font-poppins">

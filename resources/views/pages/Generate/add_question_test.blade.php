@@ -1,7 +1,7 @@
-@extends('layouts.app')
+@extends('layouts.logged-navbar')
 
 @section('content')
-<div class="container-fluid">
+<div class="container-fluid mb-5">
     <div class="row p-4 pb-0 pt-5">
         <h4 style="color: #CA6035;" class="text-center">
             <b>
@@ -10,7 +10,7 @@
         </h4>
 
         <div class="row mt-5">
-            <form action="" method="post">
+            <form>
                 <label for="Passage">
                     <b>
                         Passage
@@ -68,8 +68,8 @@
                     </label>
                     <input class="form-control mb-1" type="text" name="answer" id="answer">
             </form>
-            <a href="<?= url('generate/question-collection'); ?>">
-                <button name="submit" class="btn btn-block text-light mt-4 ps-5 pe-5" style="background-color: #3E6D81; float: right;">Add Question</button>
+            <a href="{{ asset('/question-collection') }}">
+                <button class="btn btn-block text-light mt-4 ps-5 pe-5" style="background-color: #3E6D81; float: right;">Add Question</button>
             </a>
         </div>
     </div>

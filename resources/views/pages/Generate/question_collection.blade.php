@@ -1,8 +1,8 @@
-@extends('layouts.app')
+@extends('layouts.logged-navbar')
 
 @section('content')
-<div class="container-fluid">
-    <div style="color: #CA6035;" class="row p-4 pb-0 pt-5">
+<div class="container">
+    <div style="color: #CA6035;" class="row pb-0 pt-5">
         <h3>
             <b>
                 Question Collection
@@ -12,14 +12,56 @@
             Below is your question collection. You can add the question that’s been generated to the test.
         </p>
         <div class="mb-2">
-            <a href="<?= url('generate/add-question-manual'); ?>">
-                <button type="button" name="submit" class="btn btn-block text-light mt-4 ps-5 pe-5" style="background-color: #3E6D81; float: right;">Add Question</button>
+            <a href="/generate/add-question-manual">
+                <button type="button" name="submit" class="btn btn-block text-light mt-4 ps-4 pe-4" style="background-color: #3E6D81; float: right;">Add Manual Question</button>
             </a>
         </div>
     </div>
 
-    <div class="row">
-        <div class="accordion accordion-flush m-0" id="accordionFlushExample">
+    <div class="row pt-5">
+        <div class="row text-center">
+            <div class="col-lg-4 col-md-4 col-12 mb-4">
+                <!-- <a href="http://127.0.0.1:5000/generate_question" style="color: #3E6D81; text-decoration: none;"> -->
+                <a href="{{ asset('/detail-collection')}}" style="color: #3E6D81; text-decoration: none;">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="/assets/images/error_identification.png" alt="">
+                            <br><br>
+                            <b>
+                                Error Identification
+                            </b>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12 mb-4">
+                <a href="{{ asset('/detail-collection')}}" style="color: #3E6D81; text-decoration: none;">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="/assets/images/sentence_completion.png" alt="">
+                            <br><br>
+                            <b>
+                                Sentence Completion
+                            </b>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12 mb-4">
+                <a href="{{ asset('/detail-collection')}}" style="color: #3E6D81; text-decoration: none;">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="/assets/images/vocabulary.png" alt="">
+                            <br><br>
+                            <b>
+                                Vocabulary
+                            </b>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- <div class="accordion accordion-flush m-0" id="accordionFlushExample">
             <div class="accordion-item m-3" style="border: 1px solid lightgrey; border-radius: 10px;">
                 <h2 class="accordion-header" id="flush-headingOne">
                     <button class="accordion-button collapsed" style="background-color: white !important;" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
@@ -149,7 +191,7 @@
                 @endif
                 @endforeach
             </div>
-        </div>
+        </div> -->
     </div>
 </div>
 @endsection

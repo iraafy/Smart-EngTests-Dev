@@ -1,9 +1,9 @@
-@extends('layouts.app')
+@extends('layouts.logged-navbar')
 
 @section('content')
 <div class="container p-4 pt-5">
     <div style="color: #CA6035;" class="mb-4 text-center">
-        <h3>    
+        <h3>
             <b>
                 Create Test
             </b>
@@ -28,11 +28,11 @@
         </div>
         <div class="mb-3">
             <label for="start" class="form-label" style="color: #3E6D81; font-weight: bold;">Start Test</label>
-            <input required type="time" name="start" class="form-control" id="start">
+            <input required type="time" name="start_time" class="form-control" id="start">
         </div>
         <div class="mb-3">
             <label for="end" class="form-label" style="color: #3E6D81; font-weight: bold;">End Test</label>
-            <input required type="time" name="end" class="form-control" id="end">
+            <input required type="time" name="end_time" class="form-control" id="end">
         </div>
         <div class="mb-3">
             <label for="code" class="form-label" style="color: #3E6D81; font-weight: bold;">Code Test</label>
